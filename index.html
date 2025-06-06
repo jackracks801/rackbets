@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Sports Betting Calculator</title>
+    <link rel="stylesheet" href="css/styles.css" />
+</head>
+<body>
+
+    <h1>Sports Betting Calculator</h1>
+
+    <div class="calculator">
+        <label for="odds">American Odds (e.g. -135 or +115)</label>
+        <input type="number" id="odds" placeholder="Enter odds">
+
+        <label for="betAmount">Bet Amount ($)</label>
+        <input type="number" id="betAmount" placeholder="Enter bet amount" value="10">
+
+        <button onclick="calculate()">Calculate</button>
+
+        <table id="resultsTable" style="display:none;">
+            <thead>
+                <tr>
+                    <th>Implied Probability (%)</th>
+                    <th>Total Return ($)</th>
+                    <th>Profit ($)</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td id="probability"></td>
+                    <td id="totalReturn"></td>
+                    <td id="profit"></td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+
+    <script src="js/script.js"></script>
+
+</body>
+</html>
